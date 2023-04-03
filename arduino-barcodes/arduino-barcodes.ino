@@ -2,9 +2,9 @@
   32-bit digital barcodes for synchronizing data streams
 */
 
-int OUTPUT_PIN = 13;
+int OUTPUT_PIN = 23;
 int BARCODE_BITS = 32;
-int INTER_BARCODE_INTERVAL = 30; // s
+int INTER_BARCODE_INTERVAL = 1; // s
 
 long barcode;
 
@@ -34,7 +34,7 @@ void loop() {
     else
       digitalWrite(OUTPUT_PIN,LOW);
 
-     delay((INTER_BARCODE_INTERVAL - 1) * 32 / BARCODE_BITS);
+     delay((INTER_BARCODE_INTERVAL ) * 32 / BARCODE_BITS);
   }
   
   digitalWrite(OUTPUT_PIN, LOW);         // write final low value
