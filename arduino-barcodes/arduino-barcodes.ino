@@ -4,13 +4,9 @@
 
 int OUTPUT_PIN = 23;
 int BARCODE_BITS = 32;
-<<<<<<< HEAD
 int INTER_BARCODE_INTERVAL = 1; // s
-=======
-int INTER_BARCODE_INTERVAL = 30; // s
 // create an empty char variable
 char Control;
->>>>>>> 5c0c7f15c8be37cfaee4089cfa95c6dd3d34db56
 
 long barcode;
 
@@ -49,16 +45,8 @@ void loop()
       else
         digitalWrite(OUTPUT_PIN, LOW);
 
-<<<<<<< HEAD
-     delay((INTER_BARCODE_INTERVAL ) * 32 / BARCODE_BITS);
-  }
-  
-  digitalWrite(OUTPUT_PIN, LOW);         // write final low value
-  delay(INTER_BARCODE_INTERVAL * 1000);  // wait for interval
-=======
       delay((INTER_BARCODE_INTERVAL - 1) * 32 / BARCODE_BITS);
     }
->>>>>>> 5c0c7f15c8be37cfaee4089cfa95c6dd3d34db56
 
     digitalWrite(OUTPUT_PIN, LOW);        // write final low value
     delay(INTER_BARCODE_INTERVAL * 1000); // wait for interval
